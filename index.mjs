@@ -1,4 +1,4 @@
-import { createCache, createCacheKey } from "@file-cache/core";
+import { createCache } from "@file-cache/core";
 import { createNpmPackageKey } from "@file-cache/npm";
 import path from "node:path";
 import url from "node:url";
@@ -10,14 +10,14 @@ const cache = await createCache({
   // Use hash value of the content for detecting changes
   mode: "content", // or "metadata"
   // create key for cache
-  key: createCacheKey([
+  keys: [
     // use dependency(version) as cache key
     () => createNpmPackageKey(["@file-cache/core", "@file-cache/npm"]),
     // use custom key
     () => {
       return JSON.stringify(prettierConfig);
     },
-  ]),
+  ],
 });
 
 const targetFiles = [
