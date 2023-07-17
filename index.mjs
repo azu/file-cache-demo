@@ -25,7 +25,7 @@ const targetFiles = [
   path.join(__dirname, "package-lock.json"),
 ];
 const doHeavyTask = (filePath) => {
-  console.log("PRINT", filePath);
+  console.log("DO HEAVY TASK FOR", filePath);
 };
 for (const targetFile of targetFiles) {
   const result = await cache.getAndUpdateCache(targetFile);
