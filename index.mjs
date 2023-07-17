@@ -5,6 +5,8 @@ import url from "node:url";
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+console.log("RUNNING IN ESM");
+
 const prettierConfig = {/* ... */};
 const cache = await createCache({
   // Use hash value of the content for detecting changes

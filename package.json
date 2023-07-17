@@ -4,7 +4,7 @@
   "description": "ffff",
   "main": "index.js",
   "scripts": {
-    "test": "node index.mjs"
+    "test": "node index.mjs && node index.cjs"
   },
   "keywords": [],
   "author": "azu",
